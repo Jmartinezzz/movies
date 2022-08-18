@@ -1,5 +1,5 @@
 import React from 'react';
-import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import {createStackNavigator} from '@react-navigation/stack';
 import {IconButton} from 'react-native-paper';
 import Home from '../screens/Home';
 import Movie from '../screens/Movie';
@@ -7,7 +7,7 @@ import News from '../screens/News';
 import Popular from '../screens/Popular';
 import Search from '../screens/Search';
 
-const Stack = createNativeStackNavigator();
+const Stack = createStackNavigator();
 
 export default function StackNavigation(props) {
   const {navigation} = props;
@@ -35,7 +35,7 @@ export default function StackNavigation(props) {
         name="home"
         component={Home}
         options={{
-          title: 'The movie App',
+          title: 'Movie App',
           headerLeft: () => buttonLeft('home'),
           headerRight: () => buttonRight(),
         }}
